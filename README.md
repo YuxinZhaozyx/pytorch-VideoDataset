@@ -104,7 +104,7 @@ Tools for loading video dataset and transforms on video in pytorch. You can dire
 
 ### [datasets](./datasets.py)
 
-+ **datasets.VideoDataset**
++ #### **datasets.VideoDataset**
 
   Video Dataset for loading video. 
 
@@ -172,7 +172,7 @@ Tools for loading video dataset and transforms on video in pytorch. You can dire
     	print(videos.size())
     ```
 
-+ **datasets.VideoLabelDataset**
++ #### **datasets.VideoLabelDataset**
 
   Dataset Class for Loading Video with label.
 
@@ -210,7 +210,7 @@ Tools for loading video dataset and transforms on video in pytorch. You can dire
 
 All transforms at here can be composed with `torchvision.transforms.Compose()`.
 
-+ **transforms.VideoFilePathToTensor** 
++ #### **transforms.VideoFilePathToTensor** 
 
   load video at given file path to torch.Tensor (C x L x H x W, C = 3). 
 
@@ -222,7 +222,7 @@ All transforms at here can be composed with `torchvision.transforms.Compose()`.
       + 'zero': padding the rest empty frames to zeros.
       + 'last': padding the rest empty frames to the last frame.
 
-+ **transforms.VideoFolderPathToTensor**
++ #### **transforms.VideoFolderPathToTensor**
 
   load video at given folder path to torch.Tensor (C x L x H x W).
 
@@ -233,9 +233,7 @@ All transforms at here can be composed with `torchvision.transforms.Compose()`.
       + 'zero': padding the rest empty frames to zeros.
       + 'last': padding the rest empty frames to the last frame.
 
-  
-
-+ **transforms.VideoResize**
++ #### **transforms.VideoResize**
 
   resize video tensor (C x L x H x W) to (C x L x h x w).
 
@@ -243,35 +241,35 @@ All transforms at here can be composed with `torchvision.transforms.Compose()`.
     + **size** (sequence): Desired output size. size is a sequence like (H, W), output size will matched to this.
     + **interpolation** (int, optional): Desired interpolation. Default is `PIL.Image.BILINEAR`
 
-+ **transforms.VideoRandomCrop**
++ #### **transforms.VideoRandomCrop**
 
   Crop the given Video Tensor (C x L x H x W) at a random location.
 
   + **Parameters**
     + **size** (sequence): Desired output size like (h, w).
 
-+ **transforms.VideoCenterCrop**
++ #### **transforms.VideoCenterCrop**
 
   Crops the given video tensor (C x L x H x W) at the center.
 
   + **Parameters**
     + **size** (sequence): Desired output size of the crop like (h, w).
 
-+ **transforms.VideoRandomHorizontalFlip**
++ #### **transforms.VideoRandomHorizontalFlip**
 
   Horizontal flip the given video tensor (C x L x H x W) randomly with a given probability.
 
   + **Parameters**
     + **p** (float): probability of the video being flipped. Default value is 0.5.
 
-+ **transforms.VideoRandomVerticalFlip**
++ #### **transforms.VideoRandomVerticalFlip**
 
   Vertical flip the given video tensor (C x L x H x W) randomly with a given probability.
 
   + **Parameters**
     + **p** (float): probability of the video being flipped. Default value is 0.5.
 
-+ **transforms.VideoGrayscale**
++ #### **transforms.VideoGrayscale**
 
   Convert video (C x L x H x W) to grayscale (C' x L x H x W, C' = 1 or 3)
 
